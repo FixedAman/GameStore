@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "question": "What is the best gaming store website for PC games?",
+    "answer": "Some of the best gaming store websites for PC games include Steam, Epic Games Store, GOG, Green Man Gaming, and Humble Bundle."
+  },
+  {
+    "id": 2,
+    "question": "Can I get free games on gaming store websites?",
+    "answer": "Yes, platforms like Epic Games Store frequently offer free games weekly, and Steam often provides free-to-play weekends or free games permanently added to their store."
+  },
+  {
+    "id": 3,
+    "question": "Which gaming store offers the best discounts?",
+    "answer": "Steam is well-known for its seasonal sales, Epic Games Store provides significant discounts along with coupons, and Humble Bundle offers great deals while supporting charity."
+  },
+  {
+    "id": 4,
+    "question": "Are gaming store websites safe to purchase games from?",
+    "answer": "Yes, major platforms like Steam, GOG, and Epic Games Store are secure. Always ensure you're buying from reputable stores to avoid scams or unauthorized key sellers."
+  },
+  {
+    "id": 5,
+    "question": "What payment methods are accepted on gaming store websites?",
+    "answer": "Most gaming stores accept credit and debit cards, PayPal, digital wallets, and in some cases, cryptocurrency. Check the specific platform for supported payment methods."
+  }
+]
