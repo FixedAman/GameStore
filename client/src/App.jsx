@@ -18,6 +18,7 @@ import AdminContacts from "./pages/Admin-Contacts";
 import AdminUpdate from "./pages/Admin-Update";
 import { Footer } from "./components/Footer";
 import StoreProtected from "./pages/StoreProtected";
+import VerifySubscriptionPage from "./components/verify-Subcription";
 
 const App = () => {
   return (
@@ -43,6 +44,10 @@ const App = () => {
             <Route path="users/:id/edit" element={<AdminUpdate />} />
             <Route path="contacts" element={<AdminContacts />} />
           </Route>
+          <Route
+            path="/verify-subscription"
+            element={<VerifySubscriptionPage />}
+          />
         </Routes>
         <Footer />
       </BrowserRouter>

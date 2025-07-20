@@ -18,27 +18,27 @@ const Store = () => {
   const sessionId = searchParams.get("session_id");
   const { userAuthentication } = useAuth();
   const navigate = useNavigate();
-  console.log(sessionId);
-  useSubscriptionVerifier(sessionId, () => {
-    userAuthentication();
-  });
-  useEffect(() => {
-    if (sessionId) {
-      fetch(
-        `http://localhost:5000/api/payment/get-invoice?session_id=${sessionId}`
-      )
-        .then((res) => res.json())
-        .then(async ({ pdfUrl }) => {
-          const link = document.createElement("a");
-          link.href = pdfUrl;
-          link.download = "invoice.pdf";
-          link.click();
-          window.open(pdfUrl, "_blank");
-          await verifySubscription();
-        })
-        .catch((err) => console.error("Failed to fetch invoice:", err));
-    }
-  }, [sessionId]);
+  // console.log(sessionId);
+  // useSubscriptionVerifier(sessionId, () => {
+  //   userAuthentication();
+  // });
+  // useEffect(() => {
+  //   if (sessionId) {
+  //     fetch(
+  //       `http://localhost:5000/api/payment/get-invoice?session_id=${sessionId}`
+  //     )
+  //       .then((res) => res.json())
+  //       .then(async ({ pdfUrl }) => {
+  //         const link = document.createElement("a");
+  //         link.href = pdfUrl;
+  //         link.download = "invoice.pdf";
+  //         link.click();
+  //         window.open(pdfUrl, "_blank");
+  //         await verifySubscription();
+  //       })
+  //       .catch((err) => console.error("Failed to fetch invoice:", err));
+  //   }
+  // }, [sessionId]);
   // Fetch PC platform games
   const PcGameFetch = async () => {
     setLoading(true); // Set loading true when the fetch starts

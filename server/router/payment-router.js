@@ -27,7 +27,7 @@ router.post("/create-checkout-session", async (req, res) => {
         },
       ],
       success_url:
-        "http://localhost:5173/store?session_id={CHECKOUT_SESSION_ID}",
+        "http://localhost:5173/verify-subscription?session_id={CHECKOUT_SESSION_ID}",
       cancel_url: "http://localhost:5173/cancel",
     });
 
