@@ -1,7 +1,8 @@
 import { useEffect } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { useAuth } from "../store/auth";
-
+import { ColorRing } from "react-loader-spinner";
+import Spinner from "react-bootstrap/esm/Spinner";
 const VerifySubscriptionPage = () => {
   const [searchParams] = useSearchParams();
   const sessionId = searchParams.get("session_id");
@@ -36,7 +37,7 @@ const VerifySubscriptionPage = () => {
         navigate("/store");
       } catch (error) {
         console.log(`Error is here  ${error.message}`);
-        navigate("/plan");
+        navigate("/");
       }
     };
     verify();
@@ -44,7 +45,10 @@ const VerifySubscriptionPage = () => {
 
   return (
     <>
-      <h1>Verifying payment...</h1>
+      <div className="flex justify-center items-center h-screen bg-zinc-900">
+        <Spinner animation="grow" variant="secondary" />
+        <h1 className="text-2xl font-bold text-gray-300 ml-4">Loading...</h1>
+      </div>
     </>
   );
 };
