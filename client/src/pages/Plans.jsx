@@ -20,7 +20,7 @@ const Plans = () => {
 
     try {
       const res = await fetch(
-        "http://localhost:5000/api/payment/create-checkout-session",
+        "https://my-app-backend-5yod.onrender.com/api/payment/create-checkout-session",
         {
           method: "POST",
           headers: {

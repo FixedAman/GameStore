@@ -30,7 +30,7 @@ export const AuthProvider = ({ children }) => {
     } // Avoid fetching if no token is available
 
     try {
-      const response = await fetch(`http://localhost:5000/api/auth/user`, {
+      const response = await fetch(`https://my-app-backend-5yod.onrender.com/api/auth/user`, {
         method: "GET",
         headers: {
           Authorization: authorizationData,
@@ -54,7 +54,7 @@ export const AuthProvider = ({ children }) => {
 
   const SubscriptionPlan = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/api/plan/plans`, {
+      const response = await fetch(`https://my-app-backend-5yod.onrender.com/api/plan/plans`, {
         method: "GET",
       });
       if (response.ok) {

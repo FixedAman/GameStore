@@ -7,7 +7,7 @@ const AdminContacts = () => {
   const { authorizationData } = useAuth();
   const getContactData = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/api/admin/contact`, {
+      const response = await fetch(`https://my-app-backend-5yod.onrender.com/api/admin/contact`, {
         method: "GET",
         headers: {
           Authorization: authorizationData,
@@ -22,7 +22,7 @@ const AdminContacts = () => {
   const deleteUser = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/admin/contact/delete/${id}`,
+        `https://my-app-backend-5yod.onrender.com/api/admin/contact/delete/${id}`,
         {
           method: "DELETE",
           headers: {

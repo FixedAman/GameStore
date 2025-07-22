@@ -16,13 +16,13 @@ const VerifySubscriptionPage = () => {
       }
       try {
         const invoicesRes = await fetch(
-          `http://localhost:5000/api/payment/get-invoice?session_id=${sessionId}`
+          `https://my-app-backend-5yod.onrender.com/api/payment/get-invoice?session_id=${sessionId}`
         );
         const { pdfUrl } = await invoicesRes.json();
         window.location.href = pdfUrl;
         // verify payment
         const verifyRes = await fetch(
-          `http://localhost:5000/api/payment/verify-subscription?session_id=${sessionId}`,
+          `https://my-app-backend-5yod.onrender.com/api/payment/verify-subscription?session_id=${sessionId}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

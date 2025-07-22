@@ -13,12 +13,13 @@ import Error from "./pages/Error";
 import PaymentPage from "./pages/PaymentPage";
 import Plans from "./pages/Plans";
 import AdminUsers from "./pages/Admin-Users";
-import AdminLayout from "./components/layout/Admin-layout";
+
 import AdminContacts from "./pages/Admin-Contacts";
 import AdminUpdate from "./pages/Admin-Update";
 import { Footer } from "./components/Footer";
 import StoreProtected from "./pages/StoreProtected";
 import VerifySubscriptionPage from "./components/verify-Subcription";
+import AdminLayout from "./components/layout/Admin-Layout";
 
 const App = () => {
   return (

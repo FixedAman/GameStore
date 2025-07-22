@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
-import { FaUsers, FaAddressBook, FaServicestack, FaHome } from "react-icons/fa"; // Icons from react-icons
-import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai"; // Icons for menu toggle
+import { FaUsers, FaAddressBook, FaServicestack, FaHome } from "react-icons/fa"; 
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai"; 
 
 const AdminLayout = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);

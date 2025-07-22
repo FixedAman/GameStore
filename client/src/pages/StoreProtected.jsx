@@ -10,7 +10,7 @@ const StoreProtected = () => {
       if (!token) return navigate("login");
       try {
         const res = await fetch(
-          "http://localhost:5000/api/auth/store-protected",
+          "https://my-app-backend-5yod.onrender.com/api/auth/store-protected",
           {
             headers: {
               Authorization: `Bearer ${token}`,

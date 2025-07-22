@@ -12,7 +12,7 @@ const AdminUsers = () => {
 
   const getData = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/api/admin/users`, {
+      const response = await fetch(`https://my-app-backend-5yod.onrender.com/api/admin/users`, {
         method: "GET",
         headers: {
           Authorization: authorizationData,
@@ -36,7 +36,7 @@ const AdminUsers = () => {
   const geDeleteUser = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/admin/users/delete/${id}`,
+        `https://my-app-backend-5yod.onrender.com/api/admin/users/delete/${id}`,
         {
           method: "DELETE",
           headers: {

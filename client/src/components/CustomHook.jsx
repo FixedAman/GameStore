@@ -7,7 +7,7 @@ export const useSubscriptionVerifier = (sessionId, onVerified) => {
     const verify = async () => {
       try {
         const res = await fetch(
-          `http://localhost:5000/api/payment/verify-subscription?session_id=${sessionId}`,
+          `https://my-app-backend-5yod.onrender.com/api/payment/verify-subscription?session_id=${sessionId}`,
           {
             method: "GET",
             headers: {

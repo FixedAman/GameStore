@@ -25,21 +25,24 @@ const Register = () => {
 
   const handleForm = async (e) => {
     e.preventDefault();
-    
+
     try {
-      const response = await fetch(`http://localhost:5000/api/auth/register`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(user),
-      });
+      const response = await fetch(
+        `https://my-app-backend-5yod.onrender.com/api/auth/register`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(user),
+        }
+      );
       const object = await response.json();
       console.log(object);
       toast.error(object.message);
       if (response.ok) {
         toast.success("Register Successful");
-        // store the token chilo 
+        // store the token chilo
         console.log("from server", object);
 
         setUser({ username: "", email: "", phone: "", password: "" });

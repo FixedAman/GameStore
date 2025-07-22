@@ -25,7 +25,7 @@ const AdminUpdate = () => {
   const getOneData = async () => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/admin/users/${params.id}`,
+        `https://my-app-backend-5yod.onrender.com/api/admin/users/${params.id}`,
         {
           method: "GET",
           headers: {
@@ -48,7 +48,7 @@ const AdminUpdate = () => {
     e.preventDefault();
     try {
       const response = await fetch(
-        `http://localhost:5000/api/admin/users/update/${params.id}`,
+        `https://my-app-backend-5yod.onrender.com/api/admin/users/update/${params.id}`,
         {
           method: "PATCH",
           headers: {
