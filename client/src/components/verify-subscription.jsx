@@ -34,7 +34,8 @@ const VerifySubscriptionPage = () => {
         // refresh Auth
         userAuthentication();
         // nevigate
-        navigate("https://game-store-pi-steel.vercel.app/store");
+        // navigate("https://game-store-pi-steel.vercel.app/store");
+        window.location.href = "https://game-store-pi-steel.vercel.app/store";
       } catch (error) {
         console.log(`Error is here  ${error.message}`);
         navigate("https://game-store-pi-steel.vercel.app/");
