@@ -34,10 +34,10 @@ const VerifySubscriptionPage = () => {
         // refresh Auth
         userAuthentication();
         // nevigate
-        navigate("/store");
+        navigate("https://game-store-pi-steel.vercel.app/store");
       } catch (error) {
         console.log(`Error is here  ${error.message}`);
-        navigate("/");
+        navigate("https://game-store-pi-steel.vercel.app/");
       }
     };
     verify();
