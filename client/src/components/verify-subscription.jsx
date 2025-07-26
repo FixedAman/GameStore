@@ -15,11 +15,6 @@ const VerifySubscriptionPage = () => {
         console.log("token ba session id nei ");
       }
       try {
-        const invoicesRes = await fetch(
-          `https://my-app-backend-5yod.onrender.com/api/payment/get-invoice?session_id=${sessionId}`
-        );
-        const { pdfUrl } = await invoicesRes.json();
-        window.location.href = pdfUrl;
         // verify payment
         const verifyRes = await fetch(
           `https://my-app-backend-5yod.onrender.com/api/payment/verify-subscription?session_id=${sessionId}`,
@@ -34,6 +29,11 @@ const VerifySubscriptionPage = () => {
         // refresh Auth
         userAuthentication();
         // nevigate
+        const invoicesRes = await fetch(
+          `https://my-app-backend-5yod.onrender.com/api/payment/get-invoice?session_id=${sessionId}`
+        );
+        const { pdfUrl } = await invoicesRes.json();
+        window.open(pdfUrl, "_blank");
         // navigate("https://game-store-pi-steel.vercel.app/store");
         window.location.href = "https://game-store-pi-steel.vercel.app/store";
       } catch (error) {
