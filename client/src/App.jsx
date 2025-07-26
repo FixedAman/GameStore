@@ -13,13 +13,13 @@ import Error from "./pages/Error";
 import PaymentPage from "./pages/PaymentPage";
 import Plans from "./pages/Plans";
 import AdminUsers from "./pages/Admin-Users";
-
 import AdminContacts from "./pages/Admin-Contacts";
 import AdminUpdate from "./pages/Admin-Update";
 import { Footer } from "./components/Footer";
 import StoreProtected from "./pages/StoreProtected";
-import VerifySubscriptionPage from "./components/verify-Subcription";
+
 import AdminLayout from "./components/layout/Admin-Layout";
+import VerifySubscriptionPage from "./components/verify-Subcription";
 
 const App = () => {
   return (
@@ -28,7 +28,6 @@ const App = () => {
         <CustomNavbar />
         <Routes>
           <Route path="/" element={<Home />} />
-
           <Route path="/store" element={<StoreProtected />} />
           <Route path="/store/game/:id" element={<GameDetails />} />
           <Route path="/contact" element={<Contact />} />
