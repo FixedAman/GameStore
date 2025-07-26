@@ -13,7 +13,7 @@ const errorMiddleware = require("./middlewares/error-middleware");
 const cors = require("cors");
 
 const corsOptions = {
-  origin: "http://localhost:5173",
+  origin: "https://game-store-pi-steel.vercel.app",
   methods: "GET , POST  , PUT , DELETE ,HEAD , PATCH ",
   credential: true,
 };
