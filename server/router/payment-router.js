@@ -27,8 +27,9 @@ router.post("/create-checkout-session", async (req, res) => {
         },
       ],
       success_url:
-        "http://localhost:5173/verify-subscription?session_id={CHECKOUT_SESSION_ID}",
-      cancel_url: "http://localhost:5173/cancel",
+        "https://game-store-pi-steel.vercel.app/verify-subscription?session_id={CHECKOUT_SESSION_ID}",
+
+      cancel_url: "https://game-store-pi-steel.vercel.app/payment-failed",
     });
 
     res.json({ url: session.url });
@@ -85,7 +86,7 @@ router.get("/verify-subscription", async (req, res) => {
     const authHeader = req.headers.authorization;
     if (!authHeader) return res.status(401).json({ message: "unauthorize" });
     const token = authHeader.split(" ")[1];
-    
+
     console.log("token", token);
     const decoded = jwt.verify(token, process.env.JWT_KEY);
 
@@ -105,6 +106,5 @@ router.get("/verify-subscription", async (req, res) => {
     return res.status(400).json({ message: error.message });
   }
 });
-
 
 module.exports = router;
