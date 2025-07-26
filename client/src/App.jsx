@@ -19,7 +19,7 @@ import { Footer } from "./components/Footer";
 import StoreProtected from "./pages/StoreProtected";
 
 import AdminLayout from "./components/layout/Admin-Layout";
-import VerifySubscriptionPage from "./components/verify-subcription";
+import VerifySubscriptionPage from "./components/verify-subscription";
 
 const App = () => {
   return (
